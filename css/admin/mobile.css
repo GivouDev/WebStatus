@@ -1,0 +1,135 @@
+@media only screen and (max-width: 467px){
+  .open {
+    position: absolute;
+    top: -1%;
+    left: 3%;
+    font-size: 3em;
+    visibility: visible;
+    display: block;
+  }
+
+  .sidebar{
+     position: fixed;
+     width: 35%;
+     top:0;
+     left: 0;
+     bottom: 0;
+     background: #121921;
+     padding-top: 50px;
+     transition: 0.5s;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 8%;
+  }
+
+  .close {
+    bottom: 14%;
+    visibility: visible;
+  }
+
+  .sidebar h1{
+     display: block;
+     padding: 10px 20px;
+     color: #fff;
+     text-decoration: none;
+     font-family: 'Trebuchet MS', sans-serif;
+     letter-spacing: 2px;
+     font-weight: 400;
+     margin: 0;
+     font-size: 2em;
+     text-transform: uppercase;
+     margin-top: 0;
+     transition: 0.3s;
+  }
+
+  .sidebar a{
+     display: block;
+     padding: 10px 20px;
+     color: #bbb;
+     text-decoration: none;
+     font-family: 'Trebuchet MS', sans-serif;
+     font-size: 1em;
+     letter-spacing: 2px;
+     transition: 0.3s;
+  }
+
+  .incident-date {
+    top: 0px !important;
+  }
+
+  .incident-submit {
+    top: -17% !important;
+  }
+}
+
+@media only screen and (max-height: 467px){
+  .open {
+    position: absolute;
+    top: -1%;
+    left: 3%;
+    font-size: 7em;
+    visibility: visible;
+    display: block;
+  }
+
+  .sidebar{
+     position: fixed;
+     width: 35%;
+     top:0;
+     left: 0;
+     bottom: 0;
+     background: #121921;
+     padding-top: 50px;
+  }
+
+  .sidebar h1{
+     display: block;
+     padding: 10px 20px;
+     color: #fff;
+     text-decoration: none;
+     font-family: 'Trebuchet MS', sans-serif;
+     letter-spacing: 2px;
+     font-weight: 400;
+     margin: 0;
+     font-size: 3em;
+     text-transform: uppercase;
+     margin-top: 50px;
+  }
+
+  .sidebar a{
+     display: block;
+     padding: 10px 20px;
+     color: #bbb;
+     text-decoration: none;
+     font-family: 'Trebuchet MS', sans-serif;
+     font-size: 2em;
+     letter-spacing: 2px;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    bottom: 7%;
+  }
+
+  .more-popup {
+  	margin: 15% auto 15% -30% !important;
+  	padding: 20px;
+    background: #233142;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+  }
+
+  .incident-date {
+    top: 0px !important;
+  }
+
+  .incident-submit {
+    top: -17% !important;
+  }
+
+
+}
