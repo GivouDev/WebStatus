@@ -2,7 +2,7 @@ timer();
 var checkbox = document.getElementById("cb1");
 
 function timer() {
-var timeleft = 10;
+var timeleft = 300;
 var downloadTimer = setInterval(function(){
   if (checkbox.checked) {
   	if(timeleft <= 0){
