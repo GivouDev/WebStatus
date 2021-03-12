@@ -8,6 +8,9 @@ __      __      ___.     _________ __          __
 Made with love by Givou
 
 
+#Demo
+https://status.nerdcity.at
+
 #License
 This Project is Licensed under the Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License
 View your rights here: https://creativecommons.org/licenses/by-sa/4.0/
