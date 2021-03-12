@@ -81,7 +81,7 @@ if(isset($_POST['dbhost']) && isset($_POST['dbname']) && isset($_POST['dbpwd']) 
     mysqli_query($con, "CREATE TABLE IF NOT EXISTS accounts(id int(255) PRIMARY KEY AUTO_INCREMENT, username varchar(255), password varchar(255), role varchar(255));");
     mysqli_query($con, "CREATE TABLE IF NOT EXISTS groups(id int(255) PRIMARY KEY AUTO_INCREMENT, priority int(255), name varchar(255));");
     mysqli_query($con, "CREATE TABLE IF NOT EXISTS incidents(id int(255) PRIMARY KEY AUTO_INCREMENT, status varchar(255), services varchar(255), text varchar(255), date varchar(255), childof int(255));");
-    mysqli_query($con, "CREATE TABLE IF NOT EXISTS services(id int(255) PRIMARY KEY AUTO_INCREMENT, priority int(255), groupid int(255), name varchar(255), status varchar(255), cmaintenance int(255), sname int(255));");
+    mysqli_query($con, "CREATE TABLE IF NOT EXISTS services(id int(255) PRIMARY KEY AUTO_INCREMENT, priority int(255), groupid int(255), name varchar(255), status varchar(255), cmaintenance int(255), sname varchar(255));");
     mysqli_query($con, "CREATE TABLE IF NOT EXISTS settings(type varchar(255), value varchar(255));");
 
     //Infliating Settings
