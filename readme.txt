@@ -22,7 +22,7 @@ This is a sample setup! You can modify folder names as you wish.
 cd /var/www
 
 #2:
-git clone PROJECTLINKISNICHTDA
+git clone http://git.thiemoo.at/Givou/WebStatus.git
 
 #3:
 chown -R www-data:www-data
