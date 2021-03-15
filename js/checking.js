@@ -43,7 +43,7 @@ function reload() {
       	text.innerHTML = 'Checking...';
 
       	setTimeout(function () {
-      		document.getElementById("timer").innerHTML = "10s";
+      		document.getElementById("timer").innerHTML = "300s";
           switch(current) {
             case "Online":
               loading.innerHTML = '';
