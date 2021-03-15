@@ -256,7 +256,7 @@ echo '</div>';
 
       <!-- FOOTER -->
     <footer class="footer">
-        <p class="footer">Powered by <a href="#" target="_blank">WebStatus</a></p>
+        <p class="footer">Powered by <a href="http://git.thiemoo.at/Givou/WebStatus.git" target="_blank">WebStatus</a></p>
 		<p class="footer-subtext">Made with <span class="footer-heart"><i class="fa fa-heart"></i></span> by Givou</p>
     </footer>
 
