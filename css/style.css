@@ -640,3 +640,8 @@ label::after {
 	display: none;
 	visibility: hidden;
 }
+
+.underline {
+    text-decoration: underline;     
+    text-decoration-color: #a6a6a6;  
+}
