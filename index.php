@@ -17,6 +17,8 @@
   $instancename = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='instancename'"))["value"];
   $autoreload_setting = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='autoreload'"))["value"];
   $modular_setting = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='modularwindow'"))["value"];
+  $privacy = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='privacy'"))["value"];
+  $impressum = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='impressum'"))["value"];
 
   $groups = mysqli_query($con, "SELECT priority, name, id FROM groups ORDER BY priority DESC");
   $services = mysqli_query($con, "SELECT priority, groupid, name, id, status FROM services ORDER BY priority DESC");
@@ -257,7 +259,8 @@ echo '</div>';
       <!-- FOOTER -->
     <footer class="footer">
         <p class="footer">Powered by <a class="underline" href="http://git.thiemoo.at/Givou/WebStatus.git" target="_blank">WebStatus</a></p>
-		<p class="footer-subtext">Made with <span class="footer-heart"><i class="fa fa-heart"></i></span> by Givou</p>
+        <p class="footer-subtext"><a href="<?php echo $impressum; ?>">Impressum</a> | <a href="<?php echo $privacy; ?>">Privacy policity</a></p>
+		    <p class="footer-subtext">Made with <span class="footer-heart"><i class="fa fa-heart"></i></span> by <a target"_blank" href="thiemoo.at">Givou</a></p>
     </footer>
 
 	<div class="legend">

@@ -23,6 +23,8 @@ if ( mysqli_connect_errno() ) {
 
 $role = mysqli_fetch_assoc(mysqli_query($con, "SELECT role FROM accounts WHERE id='".mysqli_real_escape_string($con, $_SESSION['id'])."'"))["role"];
 $instancename = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='instancename'"))["value"];
+$privacy = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='privacy'"))["value"];
+$impressum = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='impressum'"))["value"];
 
 if($role == "administrator") {
   $autoreload_setting = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='autoreload'"))["value"];
@@ -305,6 +307,48 @@ if($role == "administrator") {
      }
    }
   ?>
+
+  <?php
+  //Set Impressum link
+    if($role == "administrator") {
+      if(isset($_GET["upimpressum"]) && isset($_POST['impressum'])) {
+        include ('config.php');
+
+        $con = mysqli_connect($config['DBHOST'], $config['DBUSER'], $config['DBPWD'], $config['DBNAME']);
+        if ( mysqli_connect_errno() ) {
+              exit('MySQl Connection failed with error: ' . mysqli_connect_error());
+        }
+
+        $statement = mysqli_query($con,"UPDATE settings SET value='".mysqli_real_escape_string($con, $_POST['impressum'])."'
+          WHERE type='impressum'");
+
+        if($statement) {
+          header("Location: admin.php?impressumset=".$_POST['impressum']."#settings");
+        }
+      }
+    }
+   ?>
+
+   <?php
+   //Set Privacy policity link
+     if($role == "administrator") {
+       if(isset($_GET["upprivacy"]) && isset($_POST['privacy'])) {
+         include ('config.php');
+
+         $con = mysqli_connect($config['DBHOST'], $config['DBUSER'], $config['DBPWD'], $config['DBNAME']);
+         if ( mysqli_connect_errno() ) {
+               exit('MySQl Connection failed with error: ' . mysqli_connect_error());
+         }
+
+         $statement = mysqli_query($con,"UPDATE settings SET value='".mysqli_real_escape_string($con, $_POST['privacy'])."'
+           WHERE type='privacy'");
+
+         if($statement) {
+           header("Location: admin.php?privacyset=".$_POST['privacy']."#settings");
+         }
+       }
+     }
+    ?>
 
    <?php
    //Create new service

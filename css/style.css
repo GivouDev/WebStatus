@@ -452,6 +452,12 @@ label::after {
 }
 
 .footer a {
+  text-decoration: none;
+  color: #868c96;
+}
+
+.footer a:hover {
+  text-decoration: underline;
   color: #868c96;
 }
 
@@ -641,6 +647,6 @@ label::after {
 }
 
 .underline {
-    text-decoration: underline;     
-    text-decoration-color: #a6a6a6;  
+    text-decoration: underline;
+    text-decoration-color: #a6a6a6;
 }

@@ -511,6 +511,26 @@ if(isset($_GET["manageservice"])) {
             </select>
           <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
         </form>
+
+        <div class="placeholder"></div>
+        <div class="content">Impressum & Privacy Policity</div>';
+        if($_GET['impressumset']) {
+          echo '<p class="upassword">Impressum link set to: '.$_GET['impressumset'].'!</p>';
+        } else if($_GET['privacyset']) {
+          echo '<p class="upassword">Privacy policity link set to: '.$_GET['privacyset'].'!</p>';
+        }
+        echo '
+        <form action="admin.php?upimpressum" method="post">
+          <input type="text" class="username-field" value="'.$impressum.'" readonly>
+          <input type="text" class="username-field" placeholder="Impressum link" name="impressum">
+          <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
+        </form>
+
+        <form action="admin.php?upprivacy" method="post">
+          <input type="text" class="username-field" value="'.$privacy.'" readonly>
+          <input type="text" class="username-field" placeholder="Privacy policity link" name="privacy">
+          <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
+        </form>
       </div>
     </div>';
   }

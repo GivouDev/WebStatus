@@ -87,6 +87,8 @@ if(isset($_POST['dbhost']) && isset($_POST['dbname']) && isset($_POST['dbpwd']) 
     //Infliating Settings
     mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('instancename', '".mysqli_real_escape_string($con,$instancename)."')");
     mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('autoreload', 'enabled')");
+    mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('impressum', '#')");
+    mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('privacy', '#')");
 
     //Creating Administrative User
     mysqli_query($con, "INSERT INTO accounts (username, password, role) VALUES ('".mysqli_real_escape_string($con,$admin_username)."',
