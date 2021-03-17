@@ -268,7 +268,7 @@ echo '</div>';
           }
 
          ?>
-		    <p class="footer-subtext">Made with <span class="footer-heart"><i class="fa fa-heart"></i></span> by <a target"_blank" href="thiemoo.at">Givou</a></p>
+		    <p class="footer-subtext">Made with <span class="footer-heart"><i class="fa fa-heart"></i></span> by <a target"_blank" href="https://thiemoo.at">Givou</a></p>
     </footer>
 
 	<div class="legend">
