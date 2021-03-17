@@ -25,6 +25,7 @@ $role = mysqli_fetch_assoc(mysqli_query($con, "SELECT role FROM accounts WHERE i
 $instancename = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='instancename'"))["value"];
 $privacy = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='privacy'"))["value"];
 $impressum = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='impressum'"))["value"];
+$newtab = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='newtab'"))["value"];
 
 if($role == "administrator") {
   $autoreload_setting = mysqli_fetch_assoc(mysqli_query($con, "SELECT value FROM settings WHERE type='autoreload'"))["value"];
@@ -349,6 +350,27 @@ if($role == "administrator") {
        }
      }
     ?>
+
+    <?php
+    //Set new tab policy
+      if($role == "administrator") {
+        if(isset($_GET["uptabpolicy"]) && isset($_POST['newtab'])) {
+          include ('config.php');
+
+          $con = mysqli_connect($config['DBHOST'], $config['DBUSER'], $config['DBPWD'], $config['DBNAME']);
+          if ( mysqli_connect_errno() ) {
+                exit('MySQl Connection failed with error: ' . mysqli_connect_error());
+          }
+
+          $statement = mysqli_query($con,"UPDATE settings SET value='".mysqli_real_escape_string($con, $_POST['newtab'])."'
+            WHERE type='newtab'");
+
+          if($statement) {
+            header("Location: admin.php?newtabset#settings");
+          }
+        }
+      }
+     ?>
 
    <?php
    //Create new service

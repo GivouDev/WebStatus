@@ -505,10 +505,10 @@ if(isset($_GET["manageservice"])) {
         echo '
         <form action="admin.php?upautoreload" method="post">
           <input type="text" class="username-field" value="'.$autoreload_setting.'" readonly>
-            <select name = "autoreload">
-              <option value = "enabled" selected>Enabled</option>
-              <option value = "disabled">Disabled</option>
-            </select>
+          <select name = "autoreload">
+            <option value = "enabled" selected>Enabled</option>
+            <option value = "disabled">Disabled</option>
+          </select>
           <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
         </form>
 
@@ -518,6 +518,8 @@ if(isset($_GET["manageservice"])) {
           echo '<p class="upassword">Impressum link set to: '.$_GET['impressumset'].'!</p>';
         } else if($_GET['privacyset']) {
           echo '<p class="upassword">Privacy policity link set to: '.$_GET['privacyset'].'!</p>';
+        } else if(isset($_GET['newtabset'])) {
+          echo '<p class="upassword">Open new tab policy updated!</p>';
         }
         echo '
         <form action="admin.php?upimpressum" method="post">
@@ -529,6 +531,15 @@ if(isset($_GET["manageservice"])) {
         <form action="admin.php?upprivacy" method="post">
           <input type="text" class="username-field" value="'.$privacy.'" readonly>
           <input type="text" class="username-field" placeholder="Privacy policity link" name="privacy">
+          <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
+        </form>
+
+        <form action="admin.php?uptabpolicy" method="post">
+          <input type="text" class="username-field" value="'.$newtab.'" readonly>
+          <select name = "newtab">
+            <option value = "new tab" selected>new tab</option>
+            <option value = "same tab">same tab</option>
+          </select>
           <input style="display: none;" type="submit"><button class="button-green button-up">Submit</button></input>
         </form>
       </div>

@@ -89,6 +89,7 @@ if(isset($_POST['dbhost']) && isset($_POST['dbname']) && isset($_POST['dbpwd']) 
     mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('autoreload', 'enabled')");
     mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('impressum', '#')");
     mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('privacy', '#')");
+    mysqli_query($con, "INSERT INTO settings(type, value) VALUES ('newtab', 'same tab')");
 
     //Creating Administrative User
     mysqli_query($con, "INSERT INTO accounts (username, password, role) VALUES ('".mysqli_real_escape_string($con,$admin_username)."',
