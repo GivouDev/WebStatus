@@ -6,6 +6,7 @@ __      __      ___.     _________ __          __
       \/       \/    \/        \/           \/                \/
 
 Made with love by Givou
+! THIS IS JUST A CLONE OF https://git.thiemoo.at/Givou/WebStatus.git !
 
 
 #Demo
@@ -22,7 +23,7 @@ This is a sample setup! You can modify folder names as you wish.
 cd /var/www
 
 #2:
-git clone http://git.thiemoo.at/Givou/WebStatus.git
+git clone https://git.thiemoo.at/Givou/WebStatus.git
 
 #3:
 chown -R www-data:www-data
