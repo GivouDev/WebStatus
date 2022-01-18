@@ -9,7 +9,7 @@ Made with love by Givou
 
 
 #Demo
-https://status.nerdcity.at
+https://status.thiemoo.at
 
 #License
 This Project is Licensed under the Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License
